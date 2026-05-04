@@ -18,6 +18,9 @@ The grid is bound to a remote JSON endpoint and ships with grouping, filtering, 
 
 The post walks through two AI-assisted workflows for building this grid — adding Ignite UI to an existing React app, and starting from the Ignite UI CLI — and explains how Agent Skills and MCP servers feed real component context to the agent so it generates code that actually works.
 
+<img width="1279" height="682" alt="react-cli" src="https://github.com/user-attachments/assets/6fc74acc-f4b5-4050-8543-2206c4e31084" />
+
+
 ---
 
 ## ✨ Features
