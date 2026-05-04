@@ -1,0 +1,312 @@
+:local(.page) {
+  position: absolute;
+  inset: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+:local(.toolbar) {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+:local(.themeChooser) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ig-font-family);
+  color: var(--ig-surface-500-contrast);
+}
+
+:local(.themeChooser) select {
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid var(--ig-gray-300, #888);
+  border-radius: 4px;
+  background: var(--ig-surface-500, transparent);
+  color: var(--ig-surface-500-contrast, inherit);
+}
+
+:local(.grid) {
+  flex: 1 1 auto;
+  min-height: 0;
+  --ig-size: var(--ig-size-medium);
+}
+
+:local(.message) {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ig-surface-500-contrast, #fff);
+  font-family: var(--ig-font-family);
+}
+
+:local(.quantityCell) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+:local(.lowQuantityIndicator) {
+  color: var(--ig-error-500, #d32f2f);
+  font-weight: 700;
+  line-height: 1;
+}
+
+:local(.salespersonCell) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+:local(.avatar) {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
+:local(.avatarFallback) {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ig-gray-300, #9e9e9e);
+  color: var(--ig-gray-300-contrast, #fff);
+  font-size: 11px;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+:local(.customerNameCell) {
+  display: inline-block;
+  cursor: default;
+}
+
+/* ---------- Aurora Ops custom theme ---------- */
+/* Scoped under the auroraOps class so the built-in Ignite UI themes
+   are not affected when a different theme is selected. */
+
+:local(.auroraOps) {
+  --aurora-bg: #020617;
+  --aurora-surface: #0f172a;
+  --aurora-surface-elevated: #162033;
+  --aurora-text-primary: #e2e8f0;
+  --aurora-text-secondary: #cbd5e1;
+  --aurora-text-muted: #94a3b8;
+  --aurora-border: #1e293b;
+  --aurora-border-strong: #334155;
+  --aurora-primary: #22d3ee;
+  --aurora-secondary: #8b5cf6;
+  --aurora-success: #34d399;
+  --aurora-warning: #fbbf24;
+  --aurora-danger: #f87171;
+  --aurora-font: "Inter", "Titillium Web", "Roboto", "Segoe UI", sans-serif;
+
+  background: var(--aurora-bg);
+  color: var(--aurora-text-primary);
+  font-family: var(--aurora-font);
+
+  /* Page-level Ignite UI surface tokens used in styles.css */
+  --ig-surface-500: var(--aurora-bg);
+  --ig-surface-500-contrast: var(--aurora-text-primary);
+  --ig-font-family: var(--aurora-font);
+}
+
+:local(.auroraOps) :local(.themeChooser) select {
+  background: var(--aurora-surface-elevated);
+  color: var(--aurora-text-primary);
+  border-color: var(--aurora-border-strong);
+}
+
+:local(.auroraOps) :local(.grid) {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--aurora-border);
+  background: var(--aurora-surface);
+  font-family: var(--aurora-font);
+
+  /* Override Ignite UI grid tokens with Aurora Ops palette */
+  --ig-grid-grid-border-color: var(--aurora-border);
+  --ig-grid-header-background: var(--aurora-surface-elevated);
+  --ig-grid-header-text-color: var(--aurora-text-secondary);
+  --ig-grid-header-border-color: var(--aurora-border);
+  --ig-grid-header-selected-background: var(--aurora-surface-elevated);
+  --ig-grid-header-selected-text-color: var(--aurora-primary);
+  --ig-grid-sortable-header-icon-hover-color: var(--aurora-primary);
+  --ig-grid-sorted-header-icon-color: var(--aurora-primary);
+  --ig-grid-content-background: var(--aurora-surface);
+  --ig-grid-content-text-color: var(--aurora-text-primary);
+  --ig-grid-row-odd-background: var(--aurora-surface);
+  --ig-grid-row-even-background: var(--aurora-surface);
+  --ig-grid-row-odd-text-color: var(--aurora-text-primary);
+  --ig-grid-row-even-text-color: var(--aurora-text-primary);
+  --ig-grid-row-hover-background: rgba(34, 211, 238, 0.08);
+  --ig-grid-row-hover-text-color: var(--aurora-text-primary);
+  --ig-grid-row-selected-background: rgba(34, 211, 238, 0.16);
+  --ig-grid-row-selected-text-color: var(--aurora-text-primary);
+  --ig-grid-row-selected-hover-background: rgba(34, 211, 238, 0.22);
+  --ig-grid-row-selected-hover-text-color: var(--aurora-text-primary);
+  --ig-grid-row-border-color: var(--aurora-border);
+  --ig-grid-cell-active-border-color: var(--aurora-primary);
+  --ig-grid-cell-selected-background: rgba(34, 211, 238, 0.18);
+  --ig-grid-cell-selected-text-color: var(--aurora-text-primary);
+  --ig-grid-pinned-border-color: var(--aurora-primary);
+  --ig-grid-pinned-border-width: 2px;
+  --ig-grid-pinned-border-style: solid;
+  --ig-grid-resize-line-color: var(--aurora-primary);
+  --ig-grid-drop-indicator-color: var(--aurora-primary);
+  --ig-grid-group-row-background: var(--aurora-surface-elevated);
+  --ig-grid-group-row-selected-background: var(--aurora-surface-elevated);
+  --ig-grid-group-label-column-name-text: var(--aurora-primary);
+  --ig-grid-group-label-text: var(--aurora-text-primary);
+  --ig-grid-group-count-background: var(--aurora-primary);
+  --ig-grid-group-count-text-color: var(--aurora-bg);
+  --ig-grid-expand-icon-color: var(--aurora-primary);
+  --ig-grid-expand-icon-hover-color: var(--aurora-secondary);
+  --ig-grid-grouparea-background: var(--aurora-surface-elevated);
+  --ig-grid-grouparea-color: var(--aurora-text-secondary);
+  --ig-grid-drop-area-background: var(--aurora-surface-elevated);
+  --ig-grid-drop-area-text-color: var(--aurora-text-muted);
+  --ig-grid-drop-area-icon-color: var(--aurora-primary);
+  --ig-grid-filtering-row-background: var(--aurora-surface-elevated);
+  --ig-grid-filtering-row-text-color: var(--aurora-text-primary);
+  --ig-grid-filtering-header-background: var(--aurora-surface-elevated);
+  --ig-grid-filtering-header-text-color: var(--aurora-text-primary);
+
+  /* Toolbar */
+  --ig-grid-toolbar-background-color: var(--aurora-surface-elevated);
+  --ig-grid-toolbar-title-text-color: var(--aurora-text-primary);
+  --ig-grid-toolbar-dropdown-background: var(--aurora-surface-elevated);
+
+  /* Paginator */
+  --ig-paginator-background: var(--aurora-surface-elevated);
+  --ig-paginator-text-color: var(--aurora-text-primary);
+  --ig-paginator-border-color: var(--aurora-border);
+
+  /* Primary palette retargeted so chips and toolbar accents align */
+  --ig-primary-500: var(--aurora-primary);
+  --ig-secondary-500: var(--aurora-secondary);
+  --ig-success-500: var(--aurora-success);
+  --ig-warn-500: var(--aurora-warning);
+  --ig-error-500: var(--aurora-danger);
+}
+
+/* Compact uppercase headers (44px) */
+:local(.auroraOps) :local(.grid) igc-grid-header,
+:local(.auroraOps) :local(.grid) igc-grid-header-group,
+:local(.auroraOps) :local(.grid) igc-grid-header-row {
+  height: 44px;
+  min-height: 44px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* Subtle row hover with left accent bar */
+:local(.auroraOps) :local(.grid) igc-grid-row:hover::before,
+:local(.auroraOps) :local(.grid) igc-tree-grid-row:hover::before {
+  content: '';
+  position: absolute;
+  inset-block: 4px;
+  inset-inline-start: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--aurora-primary),
+    var(--aurora-secondary)
+  );
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+:local(.auroraOps) :local(.grid) igc-grid-row {
+  position: relative;
+}
+
+/* Paginator pill styling */
+:local(.auroraOps) :local(.grid) igc-paginator {
+  background: var(--aurora-surface-elevated);
+  color: var(--aurora-text-primary);
+  border-top: 1px solid var(--aurora-border);
+}
+
+/* ---------- Customer tooltip (rendered via React portal) ---------- */
+
+:local(.tooltip) {
+  position: fixed;
+  z-index: 10000;
+  min-width: 280px;
+  max-width: 320px;
+  padding: 14px 16px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  font-family: "Inter", "Titillium Web", "Roboto", "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+:local(.tooltipName) {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+:local(.tooltipLocation) {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 2px 0 12px;
+}
+
+:local(.tooltipSparkline) {
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin-bottom: 12px;
+}
+
+:local(.tooltipMetrics) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 6px;
+  column-gap: 12px;
+}
+
+:local(.tooltipMetricLabel) {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+:local(.tooltipMetricValue) {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:local(.tooltipMetricValue) :local(.upArrow) {
+  color: #34d399;
+  margin-right: 4px;
+}
+
+:local(.tooltipMetricValue) :local(.downArrow) {
+  color: #f87171;
+  margin-right: 4px;
+}

@@ -16,6 +16,7 @@
     "element-internals-polyfill": "^3.0.2",
     "functions-have-names": "^1.2.3",
     "igniteui-react": "~19.6.2",
+    "igniteui-react-grids": "~19.6.2",
     "react": "^19.2.4",
     "react-app-polyfill": "^3.0.0",
     "react-dom": "^19.2.4",

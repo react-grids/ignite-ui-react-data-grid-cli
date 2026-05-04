@@ -1,16 +1,21 @@
 {
-  "version": "15.0.1",
-  "project": {
-    "defaultPort": 3003,
-    "framework": "react",
-    "projectType": "igr-ts",
-    "projectTemplate": "empty",
-    "theme": "default",
-    "isBundle": false,
-    "components": [],
-    "sourceFiles": [],
-    "isShowcase": false,
-    "version": ""
-  },
-  "build": {}
+    "igPackageRegistry": "https://packages.infragistics.com/npm/js-licensed/",
+    "customTemplates": [],
+    "skipGit": false,
+    "skipAnalytic": false,
+    "version": "15.0.1",
+    "project": {
+        "defaultPort": 3003,
+        "framework": "react",
+        "projectType": "igr-ts",
+        "projectTemplate": "empty",
+        "theme": "default",
+        "isBundle": false,
+        "components": [],
+        "sourceFiles": [],
+        "isShowcase": false,
+        "version": ""
+    },
+    "build": {},
+    "packagesInstalled": true
 }
